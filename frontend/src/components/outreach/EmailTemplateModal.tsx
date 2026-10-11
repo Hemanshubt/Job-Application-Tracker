@@ -148,7 +148,7 @@ Best,
       onClose={onClose}
       title="Outreach & Follow-Up Email Generator"
       description="Personalized, battle-tested cold emails and thank-you notes tailored to this opportunity."
-      maxWidth="max-w-2xl"
+      maxWidth="2xl"
     >
       <div className="space-y-4">
         {/* Dynamic Placeholders Input Bar */}

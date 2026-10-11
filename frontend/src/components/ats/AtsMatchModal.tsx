@@ -124,7 +124,7 @@ export const AtsMatchModal: React.FC<AtsMatchModalProps> = ({
       onClose={onClose}
       title="ATS Resume & Job Match Analyzer"
       description={`Compare this job description against your candidate profile to optimize your interview chances.`}
-      maxWidth="max-w-3xl"
+      maxWidth="3xl"
     >
       <div className="space-y-5">
         {/* JD Input / Editor */}
