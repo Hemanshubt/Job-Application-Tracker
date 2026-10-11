@@ -10,6 +10,8 @@
 **/.env.*
 !.env.example
 !**/.env.example
+!.env.docker.example
+!**/.env.docker.example
 *.local
 
 # 2. Supabase CLI & Local Cache
