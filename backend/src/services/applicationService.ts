@@ -201,8 +201,8 @@ export class ApplicationService {
       description: data.description || '',
       notes: data.notes || '',
       rating: data.rating || 3,
-      resume_url: data.resume_url || null,
-      resume_filename: data.resume_filename || null,
+      resume_url: data.resume_url ?? undefined,
+      resume_filename: data.resume_filename ?? undefined,
       created_at: now,
       updated_at: now,
     };

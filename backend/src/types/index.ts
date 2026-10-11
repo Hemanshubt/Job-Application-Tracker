@@ -77,8 +77,8 @@ export interface Application {
   description?: string;
   notes?: string;
   rating?: number;
-  resume_url?: string;
-  resume_filename?: string;
+  resume_url?: string | null;
+  resume_filename?: string | null;
   created_at: string;
   updated_at: string;
   // Relational joins
