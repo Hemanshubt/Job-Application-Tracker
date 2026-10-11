@@ -275,12 +275,7 @@ All protected endpoints require an `Authorization: Bearer <token>` header:
 
 ---
 
-## 7. Production Deployment & DevOps Architecture
-
-> 📖 **Comprehensive Guides:**
-> - For full DevOps pipelines, multi-stage Docker builds, Nginx reverse proxy, and GitHub Actions CI/CD, refer to [**`DEVOPS.md`**](DEVOPS.md).
-> - For step-by-step VPS, EC2, and Docker Compose deployment instructions, refer to [**`DEPLOYMENT.md`**](DEPLOYMENT.md).
-
+## 7. Production Deployment
 
 ### Frontend (Vercel)
 1. Push repository to GitHub.
