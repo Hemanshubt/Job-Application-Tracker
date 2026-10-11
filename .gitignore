@@ -1,0 +1,70 @@
+# ==============================================================================
+# Git Ignore Configuration - Security & Clean Repository
+# ==============================================================================
+
+# 1. Environment & Credential Files (CRITICAL: NEVER COMMIT SECRETS)
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+*.local
+
+# 2. Supabase CLI & Local Cache
+supabase/.temp/
+.temp/
+**/.temp/
+supabase/.branches/
+
+# 3. Secret Keys, Certificates, & Credentials
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+*.secret
+*credentials*.json
+serviceAccountKey*.json
+client_secret*.json
+
+# 4. Database Files, SQLite & Dumps
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.sql.gz
+
+# 5. Dependencies
+node_modules/
+**/node_modules/
+.pnp
+.pnp.js
+
+# 6. Production Builds
+dist/
+build/
+.output/
+**/dist/
+**/build/
+
+# 7. Debug Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# 8. Editor & Operating System files
+.DS_Store
+Thumbs.db
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

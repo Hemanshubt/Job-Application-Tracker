@@ -1,0 +1,3 @@
+# Supabase CLI local cache, linked project data & pooler connection URLs
+.temp/
+.branches/
