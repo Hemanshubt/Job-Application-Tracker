@@ -4,7 +4,8 @@ import { useAuth } from '../../context/AuthContext';
 import { useToast } from '../../context/ToastContext';
 import { Input } from '../../components/ui/Input';
 import { Button } from '../../components/ui/Button';
-import { Sparkles, ArrowRight } from 'lucide-react';
+import { Logo } from '../../components/ui/Logo';
+import { ArrowRight } from 'lucide-react';
 
 export const LoginPage: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -45,9 +46,7 @@ export const LoginPage: React.FC = () => {
         {/* Header Branding */}
         <div className="text-center">
           <Link to="/" className="inline-block group mb-3">
-            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-tr from-indigo-600 to-purple-600 text-white shadow-lg shadow-indigo-600/30 group-hover:scale-105 transition-transform">
-              <Sparkles className="w-6 h-6" />
-            </div>
+            <Logo size="lg" showText={false} className="justify-center" />
           </Link>
           <h1 className="text-2xl font-bold tracking-tight text-white">
             Sign in to Trackr

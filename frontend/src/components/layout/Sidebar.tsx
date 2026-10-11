@@ -12,8 +12,8 @@ import {
   LogOut,
   ChevronLeft,
   ChevronRight,
-  Sparkles,
 } from 'lucide-react';
+import { Logo } from '../ui/Logo';
 import { useAuth } from '../../context/AuthContext';
 import { cn } from '../../lib/utils';
 
@@ -63,21 +63,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       >
         {/* Brand / Logo Header */}
         <div className="flex h-16 items-center justify-between px-5 border-b border-slate-800/80">
-          <div className="flex items-center gap-3 overflow-hidden">
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-purple-500 text-white shadow-md shadow-indigo-600/30">
-              <Sparkles className="w-5 h-5" />
-            </div>
-            {!isCollapsed && (
-              <div className="flex flex-col">
-                <span className="font-extrabold text-base tracking-tight text-white leading-none">
-                  Trackr<span className="text-indigo-400">.</span>
-                </span>
-                <span className="text-[10px] uppercase font-bold tracking-widest text-slate-500 mt-0.5">
-                  Job Pipeline
-                </span>
-              </div>
-            )}
-          </div>
+          <Logo size="sm" showText={!isCollapsed} subtitle="Job Pipeline" />
 
           <button
             onClick={onToggleCollapse}

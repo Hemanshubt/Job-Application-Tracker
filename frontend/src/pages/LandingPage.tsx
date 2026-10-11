@@ -14,9 +14,9 @@ import {
   Users,
   Building2,
   ChevronRight,
-  TrendingUp,
 } from 'lucide-react';
 import { Button } from '../components/ui/Button';
+import { Logo } from '../components/ui/Logo';
 
 export const LandingPage: React.FC = () => {
   const { user } = useAuth();
@@ -34,12 +34,7 @@ export const LandingPage: React.FC = () => {
       <nav className="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-900/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 text-white shadow-md shadow-indigo-600/20 group-hover:scale-105 transition-transform">
-              <Sparkles className="w-4 h-4" />
-            </div>
-            <span className="font-bold text-lg tracking-tight text-white">
-              Trackr
-            </span>
+            <Logo size="md" showText={true} />
             <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
               v2.0
             </span>
@@ -292,9 +287,7 @@ export const LandingPage: React.FC = () => {
       <footer className="border-t border-slate-900 py-8 text-center text-xs text-slate-500">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <div className="h-6 w-6 rounded-lg bg-indigo-600 flex items-center justify-center text-white">
-              <Sparkles className="w-3.5 h-3.5" />
-            </div>
+            <Logo size="sm" showText={false} />
             <span className="font-semibold text-slate-300">Trackr</span>
             <span>— Precision Job Search Workspace</span>
           </div>

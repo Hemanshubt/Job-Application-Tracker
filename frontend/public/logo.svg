@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64" width="240" height="64" fill="none">
+  <defs>
+    <linearGradient id="logoBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="logoAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <filter id="logoShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1e1b4b" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Emblem Icon (Squircle) -->
+  <g transform="translate(4, 4)">
+    <rect width="56" height="56" rx="16" fill="url(#logoBgGrad)"/>
+    <rect width="56" height="56" rx="16" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <circle cx="16" cy="14" r="14" fill="white" opacity="0.12"/>
+
+    <!-- T Monogram -->
+    <rect x="11" y="14" width="34" height="8" rx="4" fill="#ffffff" filter="url(#logoShadow)"/>
+    <rect x="23.5" y="20" width="9" height="22" rx="4.5" fill="#ffffff" filter="url(#logoShadow)"/>
+
+    <!-- Ascent Arrow -->
+    <path d="M40 30 L46 24 M46 24 L41 24 M46 24 L46 29" 
+          stroke="url(#logoAccent)" 
+          stroke-width="2.5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    <circle cx="46" cy="24" r="2" fill="#38bdf8"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <text x="76" y="38" font-family="Plus Jakarta Sans, Inter, system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" fill="#ffffff" letter-spacing="-0.03em">
+    Trackr<tspan fill="#818cf8">.</tspan>
+  </text>
+  <text x="77" y="52" font-family="Plus Jakarta Sans, Inter, system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#94a3b8" letter-spacing="0.15em">
+    CAREER OS
+  </text>
+</svg>
