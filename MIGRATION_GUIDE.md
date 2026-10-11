@@ -6,8 +6,8 @@ This guide covers all commands and workflows for managing migrations, applying s
 
 ## 📋 Project Configuration
 
-- **Project Reference ID:** `mqryqbnvzjutaugdvlcu`
-- **Supabase URL:** `https://mqryqbnvzjutaugdvlcu.supabase.co`
+- **Project Reference ID:** `<YOUR_PROJECT_REF>`
+- **Supabase URL:** `https://<YOUR_PROJECT_REF>.supabase.co`
 - **Migration Directory:** `supabase/migrations/`
 - **Seed File:** `supabase/seed.sql`
 
@@ -25,7 +25,7 @@ npx supabase login
 ### Step 2: Link Repository to Remote Supabase Project
 Link your local workspace to your Supabase project:
 ```bash
-npx supabase link --project-ref mqryqbnvzjutaugdvlcu
+npx supabase link --project-ref <YOUR_PROJECT_REF>
 ```
 *(If prompted, enter your database password).*
 
@@ -84,7 +84,7 @@ npx supabase db push
 
 ### Option B: Using Supabase Dashboard SQL Editor
 1. Open your project's **SQL Editor**:
-   👉 [https://supabase.com/dashboard/project/mqryqbnvzjutaugdvlcu/sql/new](https://supabase.com/dashboard/project/mqryqbnvzjutaugdvlcu/sql/new)
+   👉 `https://supabase.com/dashboard/project/<YOUR_PROJECT_REF>/sql/new`
 2. Open and copy the contents of [`supabase/seed.sql`](supabase/seed.sql).
 3. Click **Run**. (It automatically links data to your existing auth user, or generates a test user).
 
@@ -103,7 +103,7 @@ psql "postgresql://postgres.[PROJECT-REF]:[DB-PASSWORD]@aws-0-[REGION].pooler.su
 | Task | Command |
 |---|---|
 | **CLI Login** | `npx supabase login` |
-| **Link Project** | `npx supabase link --project-ref mqryqbnvzjutaugdvlcu` |
+| **Link Project** | `npx supabase link --project-ref <YOUR_PROJECT_REF>` |
 | **Push Migrations to Remote** | `npx supabase db push` |
 | **Check Migration Status** | `npx supabase migration list` |
 | **Create New Migration** | `npx supabase migration new <name>` |

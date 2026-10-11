@@ -6,9 +6,9 @@ This document details the database architecture, schema migrations, and CLI comm
 
 ## 📌 Project Overview & Configuration
 
-- **Supabase Project Reference:** `mqryqbnvzjutaugdvlcu`
-- **Dashboard URL:** [https://supabase.com/dashboard/project/mqryqbnvzjutaugdvlcu](https://supabase.com/dashboard/project/mqryqbnvzjutaugdvlcu)
-- **API URL:** `https://mqryqbnvzjutaugdvlcu.supabase.co`
+- **Supabase Project Reference:** `<YOUR_PROJECT_REF>`
+- **Dashboard URL:** `https://supabase.com/dashboard/project/<YOUR_PROJECT_REF>`
+- **API URL:** `https://<YOUR_PROJECT_REF>.supabase.co`
 - **Migrations Path:** [`supabase/migrations/`](./migrations)
 - **Seed Script:** [`supabase/seed.sql`](./seed.sql)
 
@@ -81,7 +81,7 @@ All tables enforce PostgreSQL **Row-Level Security (RLS)**:
 npx supabase login
 
 # Link repository to remote Supabase project
-npx supabase link --project-ref mqryqbnvzjutaugdvlcu
+npx supabase link --project-ref <YOUR_PROJECT_REF>
 ```
 
 ### 2. Push Pending Migrations

@@ -14,7 +14,7 @@
     "db:push": "npx supabase db push",
     "db:status": "npx supabase migration list",
     "db:new": "npx supabase migration new",
-    "db:link": "npx supabase link --project-ref mqryqbnvzjutaugdvlcu"
+    "db:link": "npx supabase link"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
