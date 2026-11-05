@@ -1,0 +1,46 @@
+name: CloudShip CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, feature/cloudship-phases-1-3]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: |
+            backend/package-lock.json
+            frontend/package-lock.json
+      - name: Backend install and compile
+        run: npm ci --prefix backend && npm run build --prefix backend
+      - name: Backend security regression tests
+        run: npm test --prefix backend
+      - name: Frontend install and compile
+        env:
+          VITE_SUPABASE_URL: https://ci-example.supabase.co
+          VITE_SUPABASE_ANON_KEY: ci-public-placeholder-not-a-real-key
+          VITE_API_URL: /api
+        run: npm ci --prefix frontend && npm run build --prefix frontend
+      - name: Build backend Docker image
+        run: docker build -f docker/backend.Dockerfile -t cloudship-backend:${{ github.sha }} .
+      - name: Container vulnerability scan
+        uses: aquasecurity/trivy-action@0.33.1
+        with:
+          image-ref: cloudship-backend:${{ github.sha }}
+          format: table
+          severity: CRITICAL
+          exit-code: '1'
+          ignore-unfixed: true
