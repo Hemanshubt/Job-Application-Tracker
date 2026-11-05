@@ -30,12 +30,20 @@ api.interceptors.request.use(async (config) => {
       }
     }
 
+    if (import.meta.env.PROD) {
+      // Never send demo credentials from a production bundle.
+      delete config.headers.Authorization;
+      return config;
+    }
+
     // In demo / local dev mode, retrieve token from localStorage or send demo-token
     const localToken = localStorage.getItem('demo_token') || 'demo-token';
     config.headers.Authorization = `Bearer ${localToken}`;
   } catch (err) {
     console.warn('[API Interceptor] Error retrieving session token:', err);
-    config.headers.Authorization = 'Bearer demo-token';
+    if (!import.meta.env.PROD) {
+      config.headers.Authorization = 'Bearer demo-token';
+    }
   }
   return config;
 });
